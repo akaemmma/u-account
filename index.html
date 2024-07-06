@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="container-fluid first">
+    <div class="discription">
+        <h1 class="logo">
+            <img src="logo.png" alt="">
+        </h1>
+        <p class="discription-text">Find 3D Object, Mockups and illustration here.</p>
+        <div class="beads">
+            <img src="deco.png" alt="">
+        </div>
+    </div>
+    <div class="login">
+        <div class="sign-in">
+            <p class="english">"English (UK) "
+                <span class="arrow"></span>
+            </p>
+            <h1 class="title">Create Account</h1>
+            <div class="acct-button">
+                <button class="google-btn">
+                    <img src="google-logo.png" alt="">
+                    Sign up with Google
+                </button>
+                <button class="facebook-btn">
+                    <img src="facebook-circled--v1.png" alt="">
+                    Sign up with Facebook
+                </button>
+            </div>
+            <p class="or">-OR-</p>
+            <form action="">
+                <input type="text" placeholder="First Name" class="fill-in">
+                <input type="email" placeholder="Email Address" class="fill-in">
+                <span class="password-intel">
+                <input id="userpassword" type="password" placeholder="Password" class="fill-in show">
+                <span id="passwordIcon" class="password-icon" alt="Toggle Password Visibility" style="cursor: pointer;">
+                    <img src="hidden.png" alt="">
+                    
+                </span>
+                </span>
+                <input type="submit" value="Create Account">
+            </form>
+        </div>
+        <div class="my-account">
+            <p>Already have an account?</p>
+        </div>
+    </div>
+    
+<!-- 
+    <script>
+        const userpassword = document.querySelector('.password-icon');
+        const classlist = userpassword.classList;
+
+        const Tooglepassword = ()=>{
+            if(classlist.toggle('show')){
+                classlist.remove('show');
+                passwordIcon.src = 'hidden.png';
+                userpassword.type = 'text'
+            }else{
+                classlist.add('show');
+                passwordIcon.src = 'hidden.png';
+                userpassword.type = 'password'
+            }
+        }
+    </script> -->
+     <script>
+        const passwordInput = document.querySelector('#userpassword');
+        const passwordIcon = document.querySelector('#passwordIcon');
+        
+        const togglePassword = () => {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordIcon.src = 'view.png'; // Change to the image you want when the password is visible
+            } else {
+                passwordInput.type = 'password';
+                passwordIcon.src = 'hidden.png'; // Change to the image you want when the password is hidden
+            }
+        };
+
+        passwordIcon.addEventListener('click', togglePassword);
+    </script>
+</div>
+</body>
+</html>
